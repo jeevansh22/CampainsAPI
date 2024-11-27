@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "26f94fa3-a3b9-4332-ac21-a2e2665daf77",
+		"name": "Django REST API Assignmen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28176995"
+	},
+	"item": [
+		{
+			"name": "Agents",
+			"item": [
+				{
+					"name": "AgentsRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"language\": \"English\",\r\n    \"voice_id\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/agents/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"agents",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAgents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8080/agents/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"agents",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaign",
+			"item": [
+				{
+					"name": "CampaignsRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Campaign Alpha\",\r\n    \"type\": \"Outbound\",\r\n    \"phone_number\": \"123-456-7890\",\r\n    \"status\": \"Running\",\r\n    \"agents\": [\r\n        1\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/campaigns/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"campaigns",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCampaigns",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CampaignResults",
+			"item": [
+				{
+					"name": "CampaignResult",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Result 1\",\r\n    \"type\": \"Outbound\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"cost\": 50.0,\r\n    \"outcome\": \"Success\",\r\n    \"call_duration\": 120.5,\r\n    \"recording\": \"http://example.com/recording.mp3\",\r\n    \"summary\": \"Call summary.\",\r\n    \"transcription\": \"Call transcription.\",\r\n    \"campaign\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/campaign-results/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"campaign-results",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
